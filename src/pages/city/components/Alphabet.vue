@@ -1,21 +1,18 @@
 <template>
   <ul class="list">
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
+    <li :key="key" class="item" v-for="(item,key) in cities">{{key}}</li>
   </ul>
 </template>
 
 <script>
 export default {
-  name: 'CutyAlphabet'
+  name: 'CutyAlphabet',
+  props: ['cities']
 }
 </script>
 
 <style lang="scss" scoped>
+@import '~styles/varibles.scss';
 .list {
   display: flex;
   flex-direction: column;
@@ -28,6 +25,7 @@ export default {
   .item {
     text-align: center;
     line-height: 0.4rem;
+    color: $bgColor;
   }
 }
 </style>
