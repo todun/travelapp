@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li :key="list.id" class="item border-bottom" v-for="list in recommendList">
+      <li :key="list.id" class="item border-bottom" v-for="list in rList">
         <img :src="list.imgUrl" class="item-img">
         <div class="item-info">
           <p class="item-title">{{list.title}}</p>
@@ -17,67 +17,9 @@
 <script>
 export default {
   name: 'HomeRecommend',
+  props: ['rList'],
   data() {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/p0/1807/ad/ad574bfe6c9e1ceda3.img.png_200x200_ea7a0734.png',
-          title: '成都欢乐谷',
-          desc: '超级旋转过山车刺激到让你怀疑人生'
-        },
-        {
-          id: '0002',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/p0/1807/ad/ad574bfe6c9e1ceda3.img.png_200x200_ea7a0734.png',
-          title: '成都欢乐谷',
-          desc: '超级旋转过山车刺激到让你怀疑人生'
-        },
-        {
-          id: '0003',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/p0/1807/ad/ad574bfe6c9e1ceda3.img.png_200x200_ea7a0734.png',
-          title: '成都欢乐谷',
-          desc: '超级旋转过山车刺激到让你怀疑人生'
-        },
-        {
-          id: '0004',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/p0/1807/ad/ad574bfe6c9e1ceda3.img.png_200x200_ea7a0734.png',
-          title: '成都欢乐谷',
-          desc: '超级旋转过山车刺激到让你怀疑人生'
-        },
-        {
-          id: '0005',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/p0/1807/ad/ad574bfe6c9e1ceda3.img.png_200x200_ea7a0734.png',
-          title: '成都欢乐谷',
-          desc: '超级旋转过山车刺激到让你怀疑人生'
-        },
-        {
-          id: '0006',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/p0/1807/ad/ad574bfe6c9e1ceda3.img.png_200x200_ea7a0734.png',
-          title: '成都欢乐谷',
-          desc: '超级旋转过山车刺激到让你怀疑人生'
-        },
-        {
-          id: '0007',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/p0/1807/ad/ad574bfe6c9e1ceda3.img.png_200x200_ea7a0734.png',
-          title: '成都欢乐谷',
-          desc: '超级旋转过山车刺激到让你怀疑人生'
-        },
-        {
-          id: '0008',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/p0/1807/ad/ad574bfe6c9e1ceda3.img.png_200x200_ea7a0734.png',
-          title: '成都欢乐谷',
-          desc: '超级旋转过山车刺激到让你怀疑人生'
-        }
-      ]
-    }
+    return {}
   }
 }
 </script>

@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" v-if="showSwiper">
       <!-- slides -->
-      <swiper-slide :key="item.id" v-for="item in swiperList">
+      <swiper-slide :key="item.id" v-for="item in list">
         <img :src="item.imgUrl" class="swiper-img">
       </swiper-slide>
 
@@ -19,24 +19,13 @@ export default {
       swiperOption: {
         pagination: '.swiper-pagination',
         loop: true
-      },
-      swiperList: [
-        {
-          id: '001',
-          imgUrl:
-            'http://img1.qunarzz.com/piao/fusion/1812/47/a51fe403715df102.jpg_750x200_085792b6.jpg'
-        },
-        {
-          id: '002',
-          imgUrl:
-            'http://img1.qunarzz.com/piao/fusion/1812/98/144a903270f64102.jpg_750x200_5f29ca30.jpg'
-        },
-        {
-          id: '003',
-          imgUrl:
-            'http://img1.qunarzz.com/piao/fusion/1812/53/6ae6f5a9bcdf2b02.jpg_750x200_b3619ab6.jpg'
-        }
-      ]
+      }
+    }
+  },
+  props: ['list'],
+  computed: {
+    showSwiper() {
+      return this.list.length
     }
   }
 }
@@ -50,7 +39,7 @@ export default {
   width: 100%;
   height: 0;
   overflow: hidden;
-  padding-bottom: 26.7%;
+  padding-bottom: 31.25%;
   .swiper-img {
     width: 100%;
   }
