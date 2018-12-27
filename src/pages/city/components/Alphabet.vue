@@ -6,7 +6,7 @@
       @click="positionLetter"
       @touchend="handleTouchEnd"
       @touchmove="handleTouchMove"
-      @touchstart="handleTouchStart"
+      @touchstart.prevent="handleTouchStart"
       class="item"
       v-for="(item,key) in cities"
     >{{key}}</li>
