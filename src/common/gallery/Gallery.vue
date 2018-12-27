@@ -46,6 +46,7 @@ export default {
   overflow: inherit;
 }
 .container {
+  z-index: 99;
   display: flex;
   flex-direction: column;
   justify-content: center;
