@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     getDetailInfo() {
-      axios.get('/api/detail.json?id=' + this.$route.params.id).then(res => {
+      axios.get('/api/detail?id=' + this.$route.params.id).then(res => {
         res = res.data
         if (res.ret && res.data) {
           this.sightName = res.data.sightName
