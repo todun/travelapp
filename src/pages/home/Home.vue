@@ -36,7 +36,9 @@ export default {
   },
   methods: {
     getHomeInfo() {
-      axios.get('/api/index?city=' + this.city).then(this.getHomeInfoSucc)
+      axios
+        .get(process.env.API_HOST + '/api/index?city=' + this.city)
+        .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc(res) {
       res = res.data

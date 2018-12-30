@@ -25,15 +25,17 @@ export default {
   },
   methods: {
     getDetailInfo() {
-      axios.get('/api/detail?id=' + this.$route.params.id).then(res => {
-        res = res.data
-        if (res.ret && res.data) {
-          this.sightName = res.data.sightName
-          this.bannerImg = res.data.bannerImg
-          this.galleryImgs = res.data.galleryImgs
-          this.categoryList = res.data.categoryList
-        }
-      })
+      axios
+        .get(process.env.API_HOST + '/api/detail?id=' + this.$route.params.id)
+        .then(res => {
+          res = res.data
+          if (res.ret && res.data) {
+            this.sightName = res.data.sightName
+            this.bannerImg = res.data.bannerImg
+            this.galleryImgs = res.data.galleryImgs
+            this.categoryList = res.data.categoryList
+          }
+        })
     }
   },
   components: {
